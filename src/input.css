@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /*This helps the hero image take the whole screen*/
+  /*You have to also see the tailwind.config.js file in the "exted section"*/
+  .section-min-height{
+    min-height: calc(100vh - 68px)
+  }
+
+  /* This is for rotating the hamburger menu */
+  .toggle-btn{
+    @apply[&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+  }
+}
